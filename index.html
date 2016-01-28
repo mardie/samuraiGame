@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta>
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+        }
+        canvas{
+            width: 100%;
+            height: 100%;
+        }
+        .target{
+            position: fixed;
+            margin: -25px;
+            width: auto;
+            height: auto;
+            font-size: 100px;
+            cursor: pointer;
+            opacity: 1;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .target:hover{
+            transition: all 0.3s;
+            opacity:0.7;
+        }
+        .do{
+            transform: rotate(-60deg);
+            top: 30%;
+            left: 25%;
+        }
+        .men{
+            top:10%;
+            left:50%;
+            /*transform: rotate(90deg);*/
+        }
+
+        .kote{
+            top:30%;
+            left:40%;
+            transform: rotate(-20deg);
+        }
+        .tsuki{
+            top:50%;
+            left:50%;
+        }
+
+        #life{
+            position: fixed;
+            transition: width 0.5s;
+            height: 7px;
+            bottom:0;
+            background: #a80000;
+        }
+        #bossLife{
+            position: fixed;
+            transition: width 0.5s;
+            height: 7px;
+            top:0;
+            background: #ff6ca4;
+        }
+        #enemyName{
+            position: fixed;
+            top:10px;
+            width: 100%;
+            text-align: center;
+            font-family: sans-serif;
+            color: #ff6ca4;
+        }
+        #points{
+            position: fixed;
+            top: 15px;
+            right: 30px;
+            font-size: 2em;
+            font-family: sans-serif;
+            color: #288b02;
+        }
+        body.idle .target{
+            color: green;
+        }
+        body.warning .target{
+            color: orange;
+        }
+        body.danger .target{
+            color: red;
+        }
+
+    </style>
+    <script src="jquery.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+    <!-- htmlbuild:js -->
+    <script src="src/p2p.js"></script>
+    <script src="src/asyncCom.js"></script>
+    <script src="src/render.js"></script>
+    <script src="src/fsm.js"></script>
+    <script src="src/game.js"></script>
+    <!-- endbuild -->
+</head>
+<body onload="init()">
+<canvas id="myCanvas"></canvas>
+<div class="target do">
+&#8595;
+</div>
+<div class="target men">
+&#8595;
+</div>
+<div class="target kote">
+&#8595;
+</div>
+<div class="target tsuki">
+&#8593;
+</div>
+<div id="points">0</div>
+<div id="life"></div>
+<div id="bossLife"></div>
+<div id="enemyName"></div>
+
+</body>
+</html>

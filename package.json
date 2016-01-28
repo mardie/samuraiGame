@@ -1,0 +1,30 @@
+{
+  "name": "samuraiGame",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:mardie/js13k.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^10.2.6",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlbuild": "^0.4.1",
+    "gulp-htmlmin": "^1.1.3",
+    "gulp-replace": "^0.5.4",
+    "gulp-size": "^1.2.3",
+    "gulp-strip-debug": "^1.0.2",
+    "gulp-uglify": "^1.2.0"
+  },
+  "dependencies": {
+    "gulp-zip": "^3.0.2"
+  }
+}
